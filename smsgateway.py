@@ -178,10 +178,11 @@ def read_config_file(filename):
 
 def init_gammu():
     sm = gammu.StateMachine()
+    logging.info(config)
     if 'config' in config['gammu']:
         sm.SetConfig(0, config['gammu']['config'])
     else:
-        logging.info('Gammu config not defined.')
+        logging.info('Gammu config not defined, trying to read /etc/gammurc')
         sm.ReadConfig()
 
     logging.info('Initializing Gammu state machine')
