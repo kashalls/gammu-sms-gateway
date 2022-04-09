@@ -4,7 +4,7 @@
 
 ### Configuration
 
-Mount this file to /app/smsgateway.yml:
+Mount this file to /etc/smsgateway.yml:
 
 ```yaml
 # Server settings
