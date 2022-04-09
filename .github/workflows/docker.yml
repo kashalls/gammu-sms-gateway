@@ -51,7 +51,7 @@ jobs:
           # Change git url to git:// to avoid authentication problems
           git remote set-url origin git://github.com/Kashalls/gammu-sms-gateway.git
 
-          docker build . --file Dockerfile --tag image
+          docker build . --file Dockerfile --tag gammu-sms-gateway
 
       - name: Log into GHCR
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u kashalls --password-stdin
